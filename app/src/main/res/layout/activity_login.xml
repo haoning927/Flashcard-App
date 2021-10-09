@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/status_bar_color">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="FlashCard"
+        android:textColor="@color/white"
+        android:textSize="60sp"
+        android:textStyle="italic" />
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/textView2"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="Email/ Username *"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        android:textSize="22dp"-->
+    <!--        android:layout_alignLeft="@+id/userName"-->
+    <!--        android:layout_below="@id/textView"/>-->
+
+    <EditText
+        android:id="@+id/userName"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/edittext_rounded_corners"
+        android:ems="10"
+        android:hint="Username/ Email"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/passWord"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/userName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/edittext_rounded_corners"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword" />
+
+
+    <ImageView
+        android:id="@+id/login_eye"
+        android:layout_width="35dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@id/passWord"
+        android:layout_marginLeft="315dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/icon_eye" />
+
+    <Button
+        android:id="@+id/signUp"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/passWord"
+        android:layout_alignStart="@id/passWord"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="SignUp"
+        android:onClick="signup"
+        app:theme="@style/MyTheme"
+        android:background="@drawable/edittext_rounded_corners"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/Login"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/passWord"
+        android:layout_alignEnd="@id/passWord"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="10dp"
+        android:fontFamily="sans-serif-medium"
+        app:theme="@style/MyTheme"
+        android:background="@drawable/edittext_rounded_corners"
+        android:text="Login"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="287dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/icon" />
+</RelativeLayout>

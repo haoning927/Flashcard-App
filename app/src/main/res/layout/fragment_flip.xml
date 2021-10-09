@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.FlipFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/flip_card"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="flip"
+        android:background="@drawable/textview_board"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/flip_radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="42dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/flip_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flip_card">
+
+        <RadioButton
+            android:id="@+id/flip_remember"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Remember" />
+
+        <RadioButton
+            android:id="@+id/flip_forgot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Forgot" />
+
+        <RadioButton
+            android:id="@+id/flip_notsure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="I'm not sure" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/flip_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Flip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flip_radioGroup" />
+
+    <Button
+        android:id="@+id/flip_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FLIP BACK"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/flip_button"
+        app:layout_constraintEnd_toEndOf="@+id/flip_button"
+        app:layout_constraintStart_toStartOf="@+id/flip_button"
+        app:layout_constraintTop_toTopOf="@+id/flip_button" />
+
+    <Button
+        android:id="@+id/flip_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NEXT"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

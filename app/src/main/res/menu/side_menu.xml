@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:id="@+id/home"
+        android:icon="@mipmap/round_home_black_24dp"
+
+        android:title="Home" />
+
+    <item android:id="@+id/GPS_map"
+        android:icon="@mipmap/round_location_on_black_24dp"
+
+        android:title="GPS Map" />
+
+    <item android:id="@+id/Manage_Set"
+        android:icon="@mipmap/round_list_alt_black_24dp"
+
+        android:title="Manage Set" />
+
+
+    <item android:id="@+id/Settings"
+        android:icon="@mipmap/round_settings_black_24dp"
+
+        android:title="Settings" />
+
+    <item android:id="@+id/Sign_out"
+        android:icon="@mipmap/exit"
+
+        android:title="Sign Out" />
+
+
+
+</menu>

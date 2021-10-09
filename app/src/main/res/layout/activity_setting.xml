@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawLayout"
+    >
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relativeLayout">
+
+    <TextView
+        android:id="@+id/Method"
+        android:onClick="temp_func"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="65dp"
+        android:text="Default Method"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Method"
+            android:layout_alignLeft="@id/Method"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/btnTyping"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Typing"
+                android:textSize="20sp"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/btnChoice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="Single Choice"/>
+
+            <RadioButton
+                android:id="@+id/btnCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="Flipping Card" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/Location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Method"
+            android:layout_alignLeft="@id/Method"
+            android:layout_marginTop="180dp"
+            android:text="Record Location"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <Switch
+            android:id="@+id/switchLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="15dp"
+            android:layout_toRightOf="@id/Location"
+            android:layout_alignBottom="@id/Location"
+            android:thumb="@drawable/thumb_selctor"
+            android:track="@drawable/track_selctor" />
+
+        <TextView
+            android:id="@+id/Notification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Location"
+            android:layout_marginTop="40dp"
+            android:layout_alignLeft="@id/Method"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="Notification" />
+
+        <Switch
+            android:id="@+id/switchNotification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_alignLeft="@id/switchLocation"
+            android:layout_toRightOf="@id/Notification"
+            android:layout_alignBottom="@id/Notification"
+            android:thumb="@drawable/thumb_selctor"
+            android:track="@drawable/track_selctor" />
+
+
+        <TextView
+            android:id="@+id/Profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Notification"
+            android:layout_marginTop="40dp"
+            android:layout_alignLeft="@id/Notification"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:onClick="edit"
+            android:text="Edit Profile" />
+    </RelativeLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/side_bar_settings"
+        app:menu="@menu/side_menu"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/activity_header">
+
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>

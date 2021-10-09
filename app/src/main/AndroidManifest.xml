@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.flashcard">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/icon"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Flashcard">
+        <activity
+            android:name=".EditWordActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".ImportSetActivity"
+            android:parentActivityName=".ManageSetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ManageWordActivity"
+            android:parentActivityName=".ManageSetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ManageSetActivity"
+            android:parentActivityName=".HomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MapsActivity"
+            android:parentActivityName=".HomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AlarmSchedules"
+            android:parentActivityName=".SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CreateNewAlarm"
+            android:parentActivityName=".AlarmSchedules"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FlashCardActivity"
+            android:parentActivityName=".HomeActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/SplashTheme"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".SignupActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".HomeActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".SettingActivity"
+            android:parentActivityName=".HomeActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".ProfileActivity"
+            android:parentActivityName=".SettingActivity"
+            android:screenOrientation="portrait"></activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBSfQ0nHnDhrhbiqVYdwZS2bdCl-6-J1qg" />
+
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name=".AlarmBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="android.media.action.DISPLAY_NOTIFICATION" />
+                <category android:name="com.google.android.gcm.demo.app" />
+            </intent-filter>
+        </receiver>
+        <service
+            android:name=".AlarmService"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="your.app.domain.NotificationService" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
+    </application>
+
+</manifest>
